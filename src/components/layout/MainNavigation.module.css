@@ -1,47 +1,112 @@
+/* MainNavigation.module.css */
+
+:root {
+  --main-color: #2e3192; /* Main color variable */
+  --gradient-start: #c73f7d; /* Gradient start color variable */
+  --gradient-end: #2e3192; /* Gradient end color variable */
+}
+
 .header {
-  width: 100%;
-  height: 5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
-  padding: 0 10%;
+  align-items: center;
+  padding: 1rem;
+  background: var(--main-color); /* Use main color variable for background */
+  color: white;
 }
 
 .logo {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-.header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: baseline;
-}
-
-.header li {
-  margin-left: 3rem;
-}
-
-.header a {
-  text-decoration: none;
   font-size: 1.5rem;
-  color: #fcb8d2;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.navLink {
+  text-decoration: none;
   color: white;
 }
 
 .badge {
-  background-color: #cc2062;
+  background-color: var(--gradient-start);
   color: white;
-  border-radius: 12px;
-  padding: 0 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
   margin-left: 0.5rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none; /* Hide nav by default */
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+    background: var(--gradient-end); /* Use gradient colors */
+    padding: 1rem;
+    flex-direction: column; /* Display flex items in column layout */
+    align-items: flex-start; /* Align items to start of column */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Display list items in column layout */
+  }
+
+  .navToggle {
+    display: block; /* Show toggle button */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 11;
+    opacity: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .navIcon {
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .navIconLine {
+    width: 25px;
+    height: 3px; /* Set height for three lines */
+    background-color: white;
+    margin: 5px 0; /* Add margin between lines */
+  }
+
+  .navToggle:checked + .navIcon .navIconLine:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navToggle:checked + .navIcon .navIconLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navToggle:checked + .navIcon .navIconLine:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .navToggle:checked ~ .nav {
+    display: flex; /* Show nav when checkbox is checked */
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+  }
 }
