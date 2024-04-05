@@ -2,7 +2,7 @@
 
 React Meetup is a web application built using React and React Router to connect users with upcoming meetups and events. This project allows users to browse all meetups, add new meetups, and manage their favorite meetups.
 
-[![React Meetup Preview](https://github.com/moataz-armash/meetup/blob/main/public/react-meetup.png)](https://meetups-app-by-react-n7qblapbu-moatazarmashs-projects.vercel.app/)
+[![React Meetup Preview](https://github.com/moataz-armash/meetup/blob/main/public/react-meetup.png)](https://meetups-app-by-react-p269kffei-moatazarmashs-projects.vercel.app/)
 
 ## Features
 
