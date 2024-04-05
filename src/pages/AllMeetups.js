@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import FavoritesContext from "../../store/favorites-context";
 import classes from "./MeetupItem.module.css";

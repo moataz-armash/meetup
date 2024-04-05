@@ -1,8 +1,9 @@
-import { Route, Switch } from "react-router-dom";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupPage from "./pages/NewMeetup";
 import FavoritesPage from "./pages/Favorites";
-import MainNavigation from "./components/layout/MainNavigation";
+//import MainNavigation from "./components/layout/MainNavigation";
 import Layout from "./components/layout/Layout";
 // Switch it using for make the page render only one page.
 // We need to add exact in the path to make it render only
